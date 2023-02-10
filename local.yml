@@ -1,0 +1,9 @@
+---
+- name: A test playbook
+  hosts: all
+  tasks:
+  - name: file
+      path: /tmp/test-file.txt
+      state: touch
+      mode: 0755
+      
