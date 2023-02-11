@@ -2,7 +2,8 @@
 - name: A test playbook
   hosts: "{{ g_app_hostgroup | default('all') }}"
   tasks:
-  - name: file
+  - name: touch a file
+    file:
       path: /tmp/test-file.txt
       state: touch
       mode: 0755
