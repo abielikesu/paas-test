@@ -1,6 +1,6 @@
 ---
 - name: A test playbook
-  hosts: all
+  hosts: "{{ g_app_hostgroup | default('all') }}"
   tasks:
   - name: file
       path: /tmp/test-file.txt
